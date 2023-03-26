@@ -1,0 +1,207 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+  outline: none;
+}
+
+/* general */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+body {
+  background-color: #bcbcbc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* custom */
+.Title {
+  color: #d6d6d6;
+  font-size: 3rem;
+}
+
+.Atm {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid black;
+  background-color: #52596c;
+}
+
+.CommandsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.CardPanel {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Screen {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  padding: 50px 15px;
+  width: 390px;
+  background-color: #333a44;
+}
+
+.LeftButtonsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 10px;
+}
+
+.ScreenPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  width: 200px;
+  border: 3px solid black;
+  background-color: #86defa;
+}
+
+.RightButtonsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 10px;
+}
+
+.ButtonPanel {
+  width: 70px;
+  height: 50px;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.ButtonPanel:hover {
+  background-color: #bcbcbc;
+}
+
+.ButtonPanel:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.Keypad {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 390px;
+  padding: 15px 0;
+  background-color: #333a44;
+}
+
+.NumberPad {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+}
+
+.KeyPadButton {
+  width: 60px;
+  height: 40px;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.KeyPadButton:hover {
+  background-color: #bcbcbc;
+}
+
+.KeyPadButton:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.ActionPad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+}
+
+.KeyPadButton_green {
+  background-color: #3fb24d;
+}
+.KeyPadButton_green:hover {
+  background-color: #379d43;
+}
+
+.KeyPadButton_red {
+  background-color: #ff0e0f;
+}
+.KeyPadButton_red:hover {
+  background-color: #df0c0c;
+}
+
+.Card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #dc863b;
+}
+
+.Card-tape {
+  width: 100%;
+  height: 20px;
+  margin-top: 18px;
+  background-color: black;
+}
+
+.Card-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 18px;
+  padding: 10px 10px;
+}
+
+.Card-name {
+  background-color: transparent;
+  color: black;
+}
