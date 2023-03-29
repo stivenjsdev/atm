@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>ATM</title>
   </head>
   <body>
     <div class="Atm">
@@ -13,37 +13,39 @@
       <div class="CommandsPanel">
         <div class="Screen">
           <div class="LeftButtonsPanel">
-            <button class="ButtonPanel">Check balance</button>
-            <button class="ButtonPanel">Enter Amount</button>
+            <button class="ButtonPanel" id="checkButton">Check Balance</button>
+            <button class="ButtonPanel" id="depositButton">Deposit</button>
           </div>
           <div class="ScreenPanel">
-            <div class="ScreenPanel-message">
+            <div class="ScreenPanel-message" id="screenMessage">
               Enter your PIN
             </div>
-            <div class="ScreenPanel-field"></div>
+            <!-- <div class="ScreenPanel-field"></div> -->
+            <input class="ScreenPanel-field" type="password" maxlength="4" name="" id="cardPin" readonly>
+            <input class="ScreenPanel-amount" type="text" id="amount" maxlength="3" readonly>
           </div>
           <div class="RightButtonsPanel">
-            <button class="ButtonPanel">Back</button>
-            <button class="ButtonPanel">Withdraw Amount</button>
+            <button class="ButtonPanel" id="backButton">Back</button>
+            <button class="ButtonPanel" id="withdrawButton">Withdraw</button>
           </div>
         </div>
     
         <div class="Keypad">
           <div class="NumberPad">
-            <button class="KeyPadButton">1</button>
-            <button class="KeyPadButton">2</button>
-            <button class="KeyPadButton">3</button>
-            <button class="KeyPadButton">4</button>
-            <button class="KeyPadButton">5</button>
-            <button class="KeyPadButton">6</button>
-            <button class="KeyPadButton">7</button>
-            <button class="KeyPadButton">8</button>
-            <button class="KeyPadButton">9</button>
-            <button class="KeyPadButton">0</button>
+            <button class="KeyPadButton" id="button1">1</button>
+            <button class="KeyPadButton" id="button2">2</button>
+            <button class="KeyPadButton" id="button3">3</button>
+            <button class="KeyPadButton" id="button4">4</button>
+            <button class="KeyPadButton" id="button5">5</button>
+            <button class="KeyPadButton" id="button6">6</button>
+            <button class="KeyPadButton" id="button7">7</button>
+            <button class="KeyPadButton" id="button8">8</button>
+            <button class="KeyPadButton" id="button9">9</button>
+            <button class="KeyPadButton" id="button0">0</button>
           </div>
           <div class="ActionPad">
-            <button class="KeyPadButton KeyPadButton_red">DEL</button>
-            <button class="KeyPadButton KeyPadButton_green">OK</button>
+            <button class="KeyPadButton isRed" id="deleteButton">DEL</button>
+            <button class="KeyPadButton isGreen" id="okButton">OK</button>
           </div>
         </div>
       </div>
@@ -54,7 +56,7 @@
           <div class="Card-tape"></div>
           <div class="Card-content">
             <div class="Card-number">xxxx xxxxxx xxxxx</div>
-            <input class="Card-name" type="text" name="" id="" placeholder="Your Name Here">
+            <input class="Card-name" type="text" name="" id="cardUserName" placeholder="Type Your Name Here">
           </div>
         </div>
       </div>

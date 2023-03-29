@@ -24,10 +24,11 @@ html {
 body {
   background-color: #bcbcbc;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
 }
 
 /* custom */
@@ -70,6 +71,7 @@ body {
   padding: 50px 15px;
   width: 390px;
   background-color: #333a44;
+  box-shadow: inset 2px 2px 5px #23282f, inset -2px -2px 5px #48525f;
 }
 
 .LeftButtonsPanel {
@@ -88,7 +90,7 @@ body {
   justify-content: center;
   height: 140px;
   width: 200px;
-  border: 3px solid black;
+  border: 4px solid black;
   background-color: #86defa;
 }
 
@@ -107,6 +109,7 @@ body {
   background-color: #d5d5d5;
   cursor: pointer;
   transition-duration: 0.4s;
+  box-shadow: 0 5px #999;
 }
 
 .ButtonPanel:hover {
@@ -114,7 +117,7 @@ body {
 }
 
 .ButtonPanel:active {
-  box-shadow: 0 5px #666;
+  box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
 
@@ -127,6 +130,7 @@ body {
   width: 390px;
   padding: 15px 0;
   background-color: #333a44;
+  box-shadow: inset 2px 2px 5px #23282f, inset -2px -2px 5px #48525f;
 }
 
 .NumberPad {
@@ -144,6 +148,7 @@ body {
   background-color: #d5d5d5;
   cursor: pointer;
   transition-duration: 0.4s;
+  box-shadow: 0 5px #999;
 }
 
 .KeyPadButton:hover {
@@ -151,7 +156,7 @@ body {
 }
 
 .KeyPadButton:active {
-  box-shadow: 0 5px #666;
+  box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
 
@@ -164,18 +169,20 @@ body {
   width: 60px;
 }
 
-.KeyPadButton_green {
+.isGreen {
   background-color: #3fb24d;
+  color: white;
 }
-.KeyPadButton_green:hover {
+.isGreen:hover {
   background-color: #379d43;
 }
 
-.KeyPadButton_red {
-  background-color: #ff0e0f;
+.isRed {
+  background-color: #ca3333;
+  color: white;
 }
-.KeyPadButton_red:hover {
-  background-color: #df0c0c;
+.isRed:hover {
+  background-color: #b02c2c;
 }
 
 .Card {
@@ -185,6 +192,12 @@ body {
   height: 120px;
   border-radius: 10px;
   background-color: #dc863b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.4s;
+}
+
+.Card:hover {
+  transform: scale(1.1);
 }
 
 .Card-tape {
@@ -204,4 +217,21 @@ body {
 .Card-name {
   background-color: transparent;
   color: black;
+}
+
+.ScreenPanel-field {
+  background-color: transparent;
+  text-align: center;
+}
+
+.ScreenPanel-message {
+  background-color: transparent;
+  text-align: center;
+  padding: 5px;
+}
+
+.ScreenPanel-amount {
+  background-color: transparent;
+  text-align: center;
+  padding: 5px;
 }
