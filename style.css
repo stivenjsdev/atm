@@ -24,7 +24,7 @@ html {
 body {
   background-color: #bcbcbc;
   display: flex;
-  flex-direction: row;
+  flex-direction: row nowrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -42,10 +42,13 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 30px;
+  gap: 4.5%;
+  padding: 3.7%; /* TODO: modify to relative value */
   border: 1px solid black;
   background-color: #52596c;
+  width: 95%;
+  max-width: 682px;
+  /* min-width: 400px; */
 }
 
 .CommandsPanel {
@@ -54,6 +57,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  width: 63%;
+  max-width: 390px;
+  /* min-width: 110px; */
 }
 
 .CardPanel {
@@ -61,15 +67,20 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  width: 33%;
+  max-width: 200px;
 }
 
 .Screen {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 50px 15px;
-  width: 390px;
+  /* padding: 50px 15px; */
+  width: 100%;
+  max-width: 390px;
+  height: 240px;
   background-color: #333a44;
   box-shadow: inset 2px 2px 5px #23282f, inset -2px -2px 5px #48525f;
 }
@@ -79,7 +90,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70px;
+  width: 18%;
+  max-width: 70px;
   gap: 10px;
 }
 
@@ -89,7 +101,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 140px;
-  width: 200px;
+  width: 52%;
+  max-width: 200px;
   border: 4px solid black;
   background-color: #86defa;
 }
@@ -99,12 +112,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70px;
+  width: 18%;
+  max-width: 70px;
   gap: 10px;
 }
 
 .ButtonPanel {
-  width: 70px;
+  width: 100%;
+  max-width: 70px;
   height: 50px;
   background-color: #d5d5d5;
   cursor: pointer;
@@ -126,8 +141,9 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 390px;
+  gap: 5.2%;
+  width: 100%;
+  max-width: 390px;
   padding: 15px 0;
   background-color: #333a44;
   box-shadow: inset 2px 2px 5px #23282f, inset -2px -2px 5px #48525f;
@@ -139,11 +155,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 200px;
+  width: 70%;
+  max-width: 200px;
 }
 
 .KeyPadButton {
-  width: 60px;
+  width: 30%;
+  max-width: 60px;
   height: 40px;
   background-color: #d5d5d5;
   cursor: pointer;
@@ -166,12 +184,14 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 60px;
+  width: 25%;
+  max-width: 60px;
 }
 
 .isGreen {
   background-color: #3fb24d;
   color: white;
+  width: 100%;
 }
 .isGreen:hover {
   background-color: #379d43;
@@ -180,6 +200,7 @@ body {
 .isRed {
   background-color: #ca3333;
   color: white;
+  width: 100%;
 }
 .isRed:hover {
   background-color: #b02c2c;
@@ -188,7 +209,8 @@ body {
 .Card {
   display: flex;
   flex-flow: column nowrap;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 120px;
   border-radius: 10px;
   background-color: #dc863b;
@@ -234,4 +256,35 @@ body {
   background-color: transparent;
   text-align: center;
   padding: 5px;
+}
+
+@media screen and (max-width: 620px) {
+  html,
+  button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  body {
+    height: auto;
+  }
+
+  .Atm {
+    flex-direction: column;
+    padding: 10px 5px;
+    gap: 20px;
+    /* max-width: 360px; */
+    margin: 10px 0px;
+  }
+
+  .CardPanel {
+    order: 0;
+    width: 100%;
+  }
+
+  .CommandsPanel {
+    order: 1;
+    width: 95%;
+  }
 }
