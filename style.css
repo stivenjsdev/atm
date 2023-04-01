@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
 button,
 input,
 select,
@@ -216,6 +224,7 @@ body {
   background-color: #dc863b;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
+  position: relative;
 }
 
 .Card:hover {
@@ -258,9 +267,37 @@ body {
   padding: 5px;
 }
 
+.Card-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+  color: white;
+  background: #dc863b;
+  background: linear-gradient(0deg, rgb(220, 134, 59) 0%, rgb(237, 149, 72) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #874810;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Card-button:hover {
+  transform: scale(1.1);
+}
+
+.Card-button:active {
+  transform: translateY(4px);
+}
+
 @media screen and (max-width: 620px) {
   html,
-  button {
+  button,
+  .Card-name {
     font-size: 12px;
   }
 }

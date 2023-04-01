@@ -109,7 +109,7 @@ const app = () => {
   // state
   const state = {
     users: [],
-    state: 'auth', // states: auth, options, deposit, withdraw, balance
+    state: 'init', // states: init, auth, options, deposit, withdraw, balance
   };
 
   // Create Users
@@ -151,6 +151,7 @@ const app = () => {
   numberPad[8] = document.getElementById("button9");
   numberPad[9] = document.getElementById("button0");
   const screenMessage = document.getElementById("screenMessage");
+  const cardButton = document.getElementById("cardButton");
 
   // define functions
   function typePin() {
@@ -201,7 +202,7 @@ const app = () => {
   }
 
   function updateState(newState) {
-    // states: auth, options, deposit, withdraw, balance
+    // states: init, auth, options, deposit, withdraw, balance
     state.state = newState;
   }
 
@@ -270,34 +271,41 @@ const app = () => {
     }
   }
 
+  function cardButtonHandler() {
+    if (state.state !== 'init') {
+      console.log('card removed...');
+      print({ message: "Welcome to ATM, please insert CARD" });
+      updateState('init');
+      this.innerHTML = "👆";
+      return;
+    }
+    if (cardUserName.value.length === 0) {
+      console.log('user name is empty...');
+      print({ message: "User Name empty, please insert CARD" });
+      return;
+    }
+    console.log('card inserted...');
+    print({ message: "Please type PIN" });
+    updateState('auth');
+    this.innerHTML = "👇";
+  }
+
 
 
   // add event listeners
   numberPad.forEach((numberButton) => {
     numberButton.addEventListener("click", typePin);
   });
-
   okButton.addEventListener("click", okHandler);
   deleteButton.addEventListener("click", erase);
   checkButton.addEventListener("click", showBalance);
   depositButton.addEventListener("click", deposit);
   withdrawButton.addEventListener("click", withdraw);
   backButton.addEventListener("click", back);
+  cardButton.addEventListener("click", cardButtonHandler);
 
   // init
-  print({ message: "Welcome to ATM, please enter your PIN" });
-
-  // atm.authentication('lisbeth cifuentes', 4321);
-  // atm.deposit(390);
-  // atm.withdraw(980);
-  // atm.checkBalance();
-
-  // atm.authentication('stiven trujillo', 1234);
-  // atm.deposit(50);
-  // atm.withdraw(100);
-  // atm.checkBalance();
-
-  // console.log(atm.users)
+  print({ message: "Welcome to ATM, please insert CARD" });
 };
 
 // init app
